@@ -71,4 +71,12 @@ function game () {
     }
         console.log(`You won ${playerWins} times.`)
         console.log(`Computer won ${computerWins} times.`)
+
+        if (playerWins < computerWins){
+            console.log('Computer wins best of five.');
+        } else if (playerWins > computerWins) {
+            console.log('Player wins best of five.');
+        } else {
+            console.log('There is tie for the best of five!');
+        }
 }
