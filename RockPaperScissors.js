@@ -1,5 +1,6 @@
-game();
+//game();
 
+/*
 function game () {
 
     console.log('This is a best of five rock paper scissors game.')
@@ -12,7 +13,8 @@ function game () {
 
         console.log(`ROUND ${roundCnt}`);
         roundCnt += 1;
-    
+
+*/
        //user RNG to determine computer's choice 
         function computerPlay () {
             scaledNumber = Math.floor((Math.random() * 3) + 1);
@@ -30,7 +32,7 @@ function game () {
         }
 
         //player choice
-        let userInput = prompt('Type in "Rock", "Paper" or "Scissors": ');
+        //let userInput = prompt('Type in "Rock", "Paper" or "Scissors": ');
         function userSelection (userInput) {
             playerChoice = userInput.charAt(0).toUpperCase() + userInput.slice(1);
             console.log(`You chose ${playerChoice}`);
@@ -68,7 +70,8 @@ function game () {
 
         gameRound(computerSelection, playerSelection);
 
-    }
+//    }
+        /*
         console.log(`You won ${playerWins} times.`)
         console.log(`Computer won ${computerWins} times.`)
 
@@ -79,4 +82,5 @@ function game () {
         } else {
             console.log('There is tie for the best of five!');
         }
-}
+        */
+//}
