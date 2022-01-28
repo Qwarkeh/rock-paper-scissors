@@ -43,7 +43,7 @@ function game () {
         let playerSelection = userSelection(userInput);
         let computerSelection = computerPlay();
 
-        function gameRound (computerSelection, playerSelection) {
+        function playRound (computerSelection, playerSelection) {
             if (playerSelection === computerSelection) {
                 console.log("Tie!")
             } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
@@ -68,7 +68,7 @@ function game () {
             }
         }
 
-        gameRound(computerSelection, playerSelection);
+        playRound(computerSelection, playerSelection);
 
 //    }
         /*
