@@ -1,3 +1,3 @@
 # rock-paper-scissors
 
-A simple console game that does five rounds of rock, paper, scissors.
+A simple game of rock, paper, scissors. First party to win five rounds wins the game.
