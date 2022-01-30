@@ -40,8 +40,8 @@ function game () {
         } 
 
         //game comparisons
-        let playerSelection = userSelection(userInput);
-        let computerSelection = computerPlay();
+       // let playerSelection = userSelection(userInput);
+       // let computerSelection = computerPlay();
 
         function playRound (computerSelection, playerSelection) {
             if (playerSelection === computerSelection) {
@@ -68,7 +68,24 @@ function game () {
             }
         }
 
-        playRound(computerSelection, playerSelection);
+       // playRound(computerSelection, playerSelection);
+
+        //Event handlers
+        const btnRock = document.querySelector('#btnRock');
+        btnRock.addEventListener('click', () => {
+            alert("Rock clicked");
+        });
+
+        const btnPaper = document.querySelector('#btnPaper');
+        btnPaper.addEventListener('click', () => {
+            alert('Paper clicked');
+        });
+
+        const btnScissors = document.querySelector('#btnScissors');
+        btnScissors.addEventListener('click', () => {
+            alert('Scissors clicked');
+        });
+
 
 //    }
         /*
