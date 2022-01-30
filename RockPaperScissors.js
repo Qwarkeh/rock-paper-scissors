@@ -31,18 +31,6 @@ function game () {
             }
         }
 
-        //player choice
-        //let userInput = prompt('Type in "Rock", "Paper" or "Scissors": ');
-        function userSelection (userInput) {
-            playerChoice = userInput.charAt(0).toUpperCase() + userInput.slice(1);
-            console.log(`You chose ${playerChoice}`);
-            return playerChoice;
-        } 
-
-        //game comparisons
-       // let playerSelection = userSelection(userInput);
-       // let computerSelection = computerPlay();
-
         function playRound (computerSelection, playerSelection) {
             if (playerSelection === computerSelection) {
                 console.log("Tie!")
@@ -59,33 +47,33 @@ function game () {
             } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
                 console.log("You win, Paper beats Rock!");
                 playerWins += 1;
-            } else if (playerSelection === 'Scissors' && computerPlay === 'Paper') {
+            } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
                 console.log("You win, Scissors beats Paper!");
                 playerWins += 1;
-            } else if (playerSelection === 'Scissors' && computerPlay === 'Rock') {
+            } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
                 console.log("You lose, Rock beats Scissors!");
                 computerWins += 1;
             }
         }
 
-       // playRound(computerSelection, playerSelection);
-
         //Event handlers
         const btnRock = document.querySelector('#btnRock');
         btnRock.addEventListener('click', () => {
-            alert("Rock clicked");
+            let computerSelection = computerPlay();
+            playRound(computerSelection, 'Rock');
         });
 
         const btnPaper = document.querySelector('#btnPaper');
         btnPaper.addEventListener('click', () => {
-            alert('Paper clicked');
+            let computerSelection = computerPlay();
+            playRound(computerSelection, 'Paper');
         });
 
         const btnScissors = document.querySelector('#btnScissors');
         btnScissors.addEventListener('click', () => {
-            alert('Scissors clicked');
+            let computerSelection = computerPlay();
+            playRound(computerSelection, 'Scissors');
         });
-
 
 //    }
         /*
